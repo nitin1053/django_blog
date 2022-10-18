@@ -1,0 +1,13 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+    <h1>Blog Home</h1>
+    <hr>
+    {% for posts in posts %}
+        <h3>{{ posts.title }}</h3>
+        <p>By: {{ posts.author }} on {{ posts.date_posted}}</p>
+        <p> Data: {{ posts.content }}</p>
+        <p>Time: {{ posts.time }}</p>
+        <p>Location: {{ posts.location }}</p> <br>
+    {% endfor %}
+{% endblock content %}
+    
